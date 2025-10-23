@@ -1,0 +1,14 @@
+# Requirements for Genetic Algorithm - Pump Optimization
+# Python 3.6 or higher required
+
+# Core numerical computing
+numpy>=1.19.0
+
+# Plotting and visualization
+matplotlib>=3.3.0
+
+# Optional: For better random number generation
+# scipy>=1.5.0
+
+# Optional: For pandas DataFrame support (if needed for data analysis)
+# pandas>=1.1.0
