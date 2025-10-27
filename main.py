@@ -86,7 +86,7 @@ class AlgoritmoGenetico:
         for individuo in self.poblacion:
             x = individuo.genes[0]
             # Como queremos minimizar, el fitness es el negativo de la función
-            # O podemos usar 1/(1+f(x)) para tener valores positivos
+            # O podemos usar 1/(1+f(x)) para "darle la vuelta" a la función y tener valores positivos
             valor_funcion = self.funcion_objetivo(x)
             individuo.fitness = 1 / (1 + valor_funcion)
         

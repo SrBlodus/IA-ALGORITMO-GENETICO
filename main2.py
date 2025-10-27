@@ -155,7 +155,7 @@ class AlgoritmoGenetico:
     
     def cruzar(self, padre1: Individuo, padre2: Individuo) -> Tuple[Individuo, Individuo]:
         """
-        Realiza cruce aritmético entre dos padres.
+        Realiza cruce aritmético entre dos padres.  
         
         Args:
             padre1: Primer padre
@@ -164,6 +164,8 @@ class AlgoritmoGenetico:
         Returns:
             Tupla con dos hijos
         """
+
+        # x es número con decimales entonces vamos a usar una representación real con cruce de tipo aritmético. 
         if random.random() < self.prob_cruce:
             # Cruce aritmético: hijo = alpha*padre1 + (1-alpha)*padre2
             alpha = random.random()
