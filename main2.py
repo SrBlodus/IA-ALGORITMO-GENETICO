@@ -86,7 +86,7 @@ class AlgoritmoGenetico:
         Returns:
             Valor de la función objetivo
         """
-        return abs(x**3 - 20*x + 5)
+        return abs(x**3 - 20*x + 5)  # f(x) = |x³ - 20x + 5|
     
     def inicializar_poblacion(self):
         """Crea la población inicial con individuos aleatorios."""
@@ -98,6 +98,8 @@ class AlgoritmoGenetico:
         """Evalúa el fitness de todos los individuos de la población."""
         for individuo in self.poblacion:
             x = individuo.genes[0]
+             # Como queremos minimizar, el fitness es el negativo de la función
+             # O podemos usar 1/(1+f(x)) para "darle la vuelta" a la función y tener valores positivos
             valor_funcion = self.funcion_objetivo(x)
             individuo.fitness = 1 / (1 + valor_funcion)
         
